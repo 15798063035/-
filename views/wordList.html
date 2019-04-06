@@ -1,0 +1,22 @@
+<table class="table table-bordered table-hover table-condensed">
+    <tr>
+        <th style="width: 50px; text-align: center;">#</th>
+        <th style="width: 160px;">content</th>
+        <th style="width: 50px;">time</th>
+        <th style="width: 220px;">body</th>
+        <th>del</th>
+    </tr>
+    <tbody>
+        {{each wordsItem}}
+        {{if $value.display}}
+        <tr id="{{$value.id}}">
+            <td style="text-align: center;">{{$index}}</td>
+            <td>{{$value.content}}</td>
+            <td style="text-align: center;">{{$value.click}}</td>
+            <td class="wordBody">{{$value.body}}</td>
+            <td><button class="btn btn-default btn-xs del" articleId="{{articleId}}">del</button></td>
+        </tr>
+        {{/if}}
+        {{/each}}
+    </tbody>
+</table>
